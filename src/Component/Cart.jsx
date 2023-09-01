@@ -3,9 +3,9 @@ import img from '../img/image-product-1-thumbnail.jpg'
 import eliminar from '../img/icon-delete.svg'
 
 
-const Cart = ({ Buy, precio, cantidad}) => {
+const Cart = ({ Buy, precio, cantidad, setContador}) => {
     
-
+const vaciar = () => setContador(0)
 
     
 
@@ -21,7 +21,7 @@ const Cart = ({ Buy, precio, cantidad}) => {
                 $125.00   x <span>{cantidad}</span> <span>{precio}</span></p>
 
                 </div>
-                <img src={eliminar} alt="delete"/> 
+                <img src={eliminar} alt="delete" onClick={vaciar}/> 
             </div>
             <button className='btn-buy'>Checkout</button>
     </div>

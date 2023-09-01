@@ -103,6 +103,7 @@ function App() {
         precio={precio}
         setCantidad={setCantidad}
         cantidad={cantidad}
+        setContador={setContador}
         // vaciar={vaciar}
         // vaciarcarro={vaciarcarro}
       />
