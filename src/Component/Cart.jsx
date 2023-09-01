@@ -3,9 +3,12 @@ import img from '../img/image-product-1-thumbnail.jpg'
 import eliminar from '../img/icon-delete.svg'
 
 
-const Cart = ({ Buy, precio, cantidad, setContador}) => {
+const Cart = ({ Buy, precio, cantidad, setCantidad, setContador}) => {
     
-const vaciar = () => setContador(0)
+const vaciar = () => { 
+    setCantidad(0)
+    setContador(0)
+}
 
     
 
@@ -23,7 +26,7 @@ const vaciar = () => setContador(0)
                 </div>
                 <img src={eliminar} alt="delete" onClick={vaciar}/> 
             </div>
-            <button className='btn-buy'>Checkout</button>
+            <button className='btn-buy'  onClick={vaciar}>Checkout</button>
     </div>
 
     <div className={cantidad=== 0 ? 'sin-producto': 'carrito-vacio'}>

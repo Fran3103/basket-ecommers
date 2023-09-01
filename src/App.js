@@ -15,9 +15,13 @@ import Cart from './Component/Cart';
 
 function App() {
 
+
+  //modal
   const [cerrar, setCerrar] = useState(false)
 
   const [imagen, setImagen]= useState(imgG1)
+
+
 
   const open = () => setCerrar(true)
 
@@ -50,7 +54,7 @@ function App() {
     }
   
 
-    // const precio = () => 125
+
 
 
     // carrito
@@ -62,34 +66,11 @@ function App() {
     const [precio, setPrecio] = useState(0) 
     const [cantidad, setCantidad] = useState(0) 
 
-    
-
-   
-      const total = () => {
-
-        const totalPrecio = ()=> contador * 125 
-   
-        setPrecio(totalPrecio)
-        setCantidad(contador)
-         
-       }
-
-       
-
-    
-
-    // const [vaciar, setVaciar] = useState(cantidad)
-    // const vaciarcarro = () =>setVaciar(0)
-
-    // Añadir al Carrito
 
     const [contador, setContador] = useState (0)
 
 
-  // const imgClick1 = setImagen(imgGrande1)
-  //   const imgClick2 = setImagen(imgGrande2)
-  //   const imgClick3 = setImagen(imgGrande3)
-  //   const imgClick4 = setImagen(imgGrande4)
+
   return (
     <div className="App">
 
@@ -104,8 +85,7 @@ function App() {
         setCantidad={setCantidad}
         cantidad={cantidad}
         setContador={setContador}
-        // vaciar={vaciar}
-        // vaciarcarro={vaciarcarro}
+     
       />
       <div className='container-gral '>
           <Gallery 
@@ -117,11 +97,16 @@ function App() {
             btn4={btn4} 
             />
           <Section 
-          total={total}
+          setCantidad={setCantidad}
+          setPrecio={setPrecio}
           contador={contador}
           setContador={setContador}
           />
-          <Modal closeModal={closeModal} cerrar={cerrar}  imagen={imagen} btn1={btn1} 
+          <Modal 
+            closeModal={closeModal} 
+            cerrar={cerrar}  
+            imagen={imagen} 
+            btn1={btn1} 
             btn2={btn2} 
             btn3={btn3} 
             btn4={btn4}/>

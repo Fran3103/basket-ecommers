@@ -1,6 +1,6 @@
 import React from 'react'
 import carrito from '../img/icon-cartcopy.svg'
-const Section = ({contador, setContador, total}) => {
+const Section = ({contador, setContador, setPrecio, setCantidad}) => {
     
 
     const sumar = () => {
@@ -23,7 +23,7 @@ const Section = ({contador, setContador, total}) => {
         <h1>Fall Limited Edition Sneakers</h1>
         <p className='description'>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
         <div className="price">
-            <h2>$125.00</h2><div className="descuento"><p>50%</p></div>
+            <h2 >$125.00</h2><div className="descuento"><p>50%</p></div>
             
         </div>
         <span className='desc'>$250.00</span>
@@ -33,7 +33,13 @@ const Section = ({contador, setContador, total}) => {
                 <p className='contador-total'>{contador}</p>
                 <p onClick={sumar} className='sumayresta'>+</p>
             </div>
-            <button className='add-cart-btn'onClick={total()}><p><img src={carrito} className='cart' alt="carrito" />  
+            <button className='add-cart-btn'onClick={ 
+                () => {
+                         const totalPrecio = () => contador * 125 
+                         setPrecio(totalPrecio)
+                         setCantidad(contador)
+                         }}>
+                        <p><img src={carrito} className='cart' alt="carrito" />  
                  Add to cart </p></button>
         </div>
     </div>
