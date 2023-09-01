@@ -4,7 +4,12 @@ import logo from '../img/logo.svg'
 import carrito from '../img/icon-cart.svg'
 import usuario from '../img/image-avatar.png'
 
-const NavBar = () => {
+
+const NavBar = ({actualizar}) => {
+
+ 
+
+
   return (
     <div>
         <nav className="navbar navbar-expand-lg  ">
@@ -54,8 +59,8 @@ const NavBar = () => {
 
 {/* carrito y usuario */}
                   <div className='d-flex carrito  col-2'>
-                      <img src={carrito} alt="carrito" className='img ' />
-                      <img src={usuario} alt="usuario" className='img  ' />
+                      <img src={carrito} alt="carrito" className='img  carrito-img' onClick={actualizar}/>
+                      <img src={usuario} alt="usuario" className='img usuario ' />
 
                   </div>
               </div>

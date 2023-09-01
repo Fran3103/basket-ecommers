@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import carrito from '../img/icon-cartcopy.svg'
-const Section = () => {
-    const [contador, setContador] = useState (0)
+const Section = ({contador, setContador, total}) => {
+    
 
     const sumar = () => {
         setContador( contador + 1)
@@ -13,6 +13,8 @@ const Section = () => {
             setContador( contador - 1)
         }
     }
+
+    
 
 
   return (
@@ -31,7 +33,7 @@ const Section = () => {
                 <p className='contador-total'>{contador}</p>
                 <p onClick={sumar} className='sumayresta'>+</p>
             </div>
-            <button className='add-cart-btn'><p><img src={carrito} className='cart' alt="carrito" />  
+            <button className='add-cart-btn'onClick={total()}><p><img src={carrito} className='cart' alt="carrito" />  
                  Add to cart </p></button>
         </div>
     </div>
