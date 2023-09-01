@@ -22,7 +22,9 @@ const NavBar = ({actualizar, cantidad}) => {
                   <div className="col  ">
                       <button className="navbar-toggler  " type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span className="navbar-toggler-icon "></span>
+                      
                       </button>
+                   
                       <img src={logo} alt="logo" className='logo  ' />
                   </div>
              
@@ -59,8 +61,10 @@ const NavBar = ({actualizar, cantidad}) => {
 
 {/* carrito y usuario */}
                   <div className='d-flex carrito  col-2'>
+                     <div className="cart-container">
                       <p className={ cantidad > 0 ? 'numero-cart' : 'carrito-vacio'}>{cantidad}</p>
-                      <img src={carrito} alt="carrito" className='img  carrito-img' onClick={actualizar}/>
+                        <img src={carrito} alt="carrito" className='img  carrito-img' onClick={actualizar}/>
+                     </div>
                       <img src={usuario} alt="usuario" className='img usuario ' />
 
                   </div>

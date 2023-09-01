@@ -9,6 +9,9 @@ import imgG2 from '../img/image-product-2.jpg'
 import imgG3 from '../img/image-product-3.jpg'
 import imgG4 from '../img/image-product-4.jpg'
 
+import next from '../img/icon-next.svg'
+import previous from '../img/icon-previous.svg'
+
 const Gallery = ({ btn1 , btn2, btn3, btn4}) => {
 
   // const [open, setOpen] = useState(false)
@@ -34,7 +37,7 @@ const Gallery = ({ btn1 , btn2, btn3, btn4}) => {
       </div>
       <div className="carousel-inner rounded-4">
         <div className="carousel-item active">
-          <img src={imgG1} className=" w-100" alt="..." onClick={ btn1}  />
+          <img src={imgG1} className="d-block w-100" alt="..." onClick={ btn1}  />
           
         </div>
         <div className="carousel-item">
@@ -50,11 +53,11 @@ const Gallery = ({ btn1 , btn2, btn3, btn4}) => {
         
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <img className="carousel-control-prev-icon" aria-hidden="true" src={previous} alt='previo'/>
         <span className="visually-hidden">Previous</span>
       </button>
       <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <img className="carousel-control-next-icon" aria-hidden="true" src={next} alt='next' />
         <span className="visually-hidden">Next</span>
       </button>
       </div>

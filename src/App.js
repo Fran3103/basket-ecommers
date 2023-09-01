@@ -21,9 +21,15 @@ function App() {
 
   const [imagen, setImagen]= useState(imgG1)
 
+  const [activa, setActiva] = useState(false)
 
+  const open = () => {
+    setCerrar(true)
 
-  const open = () => setCerrar(true)
+    
+  }
+
+  const activar = () => setActiva(false)
 
   const closeModal = () => {
     
@@ -35,20 +41,23 @@ function App() {
     const btn1 = () => {
       setImagen(imgG1)
       open()
-     
+      
     }
 
     const btn2 = () =>{
       setImagen(imgG2)
       open()
+     
     }
     const btn3 = () => {
       setImagen(imgG3)
       open()
+      
     }
     const btn4 = () => {
       setImagen(imgG4)
       open()
+      
       
      
     }
@@ -110,7 +119,10 @@ function App() {
             btn1={btn1} 
             btn2={btn2} 
             btn3={btn3} 
-            btn4={btn4}/>
+            btn4={btn4}
+            activa={activa}
+            activar={activar}
+            setActiva={setActiva}/>
       </div>
 
 

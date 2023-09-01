@@ -12,7 +12,7 @@ import imagen4 from '../img/image-product-4-thumbnail.jpg'
 import botones1 from '../img/icon-next.svg'
 import botones2 from '../img/icon-previous.svg'
 import close from '../img/icon-close.svg'
-const Modal = ({closeModal, cerrar,  btn1 , btn2, btn3, btn4 , imagen}) => {
+const Modal = ({closeModal, cerrar,  btn1 , btn2, btn3, btn4 , imagen, activa, activar, setActiva}) => {
 
 
     // const [imagene, setImagene]= useState(imgGrande1)
@@ -28,7 +28,7 @@ const Modal = ({closeModal, cerrar,  btn1 , btn2, btn3, btn4 , imagen}) => {
   return (
     <div className= { cerrar ? 'container-modal ' : 'cerrar'} >
        <div className="imagen-container">
-            <img src={close} alt="close" onClick={closeModal} />
+            <img src={close} alt="close" className='close' onClick={closeModal} />
             <div className="imagenGrande">
                 <img src={imagen} alt="---" />
                 <div className="botones">
@@ -38,10 +38,10 @@ const Modal = ({closeModal, cerrar,  btn1 , btn2, btn3, btn4 , imagen}) => {
             
             </div>
             <div className="imagenes">
-                <img src={imagen1} alt="---" onClick={btn1} />
-                <img src={imagen2} alt="---" onClick={btn2}/>
-                <img src={imagen3} alt="---" onClick={btn3}/>
-                <img src={imagen4} alt="---"  onClick={btn4}/>
+                <img src={imagen1} alt="---" onClick={()=> btn1()}  className="activa"/>
+                <img src={imagen2} alt="---" onClick={()=> btn2()} className="activa"/>
+                <img src={imagen3} alt="---" onClick={()=>btn3()} className="activa"/>
+                <img src={imagen4} alt="---"  onClick={()=>btn4()}   className="activa"/>
 
                 {/* <img src={imagen1} alt="---" onClick={imagenes1} />
                 <img src={imagen2} alt="---" onClick={imagenes2}/>
