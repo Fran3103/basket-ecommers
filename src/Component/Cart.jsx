@@ -21,10 +21,10 @@ const vaciar = () => {
                 <img src={img} alt="producto" className='producto-seleccionado'/>
                 <div className='titulo'>
                 <p>Fall Limited Edition Sneakers
-                $125.00   x <span>{cantidad}</span> <span>{precio}</span></p>
+                $125.00   x   <span>{cantidad}  </span><strong>  $  {  precio}</strong></p>
 
                 </div>
-                <img src={eliminar} alt="delete" onClick={vaciar}/> 
+                <img src={eliminar} alt="delete" className='eliminar' onClick={vaciar}/> 
             </div>
             <button className='btn-buy'  onClick={vaciar}>Checkout</button>
     </div>

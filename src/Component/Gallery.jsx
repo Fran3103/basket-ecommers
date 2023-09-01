@@ -34,7 +34,7 @@ const Gallery = ({ btn1 , btn2, btn3, btn4}) => {
       </div>
       <div className="carousel-inner rounded-4">
         <div className="carousel-item active">
-          <img src={imgG1} className="d-block w-100" alt="..." onClick={ btn1}  />
+          <img src={imgG1} className=" w-100" alt="..." onClick={ btn1}  />
           
         </div>
         <div className="carousel-item">

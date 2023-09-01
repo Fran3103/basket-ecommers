@@ -5,7 +5,7 @@ import carrito from '../img/icon-cart.svg'
 import usuario from '../img/image-avatar.png'
 
 
-const NavBar = ({actualizar}) => {
+const NavBar = ({actualizar, cantidad}) => {
 
  
 
@@ -37,19 +37,19 @@ const NavBar = ({actualizar}) => {
 
                           </li>
                           <li className="nav-item">
-                            <a className="nav-link" aria-current="page" href="/">Collections</a>
+                            <a className="nav-link" aria-current="page" href="/#">Collections</a>
                           </li>
                           <li className="nav-item">
-                            <a className="nav-link" href="/"> Men</a>
+                            <a className="nav-link" href="/#"> Men</a>
                           </li>
                           <li className="nav-item">
-                            <a className="nav-link " aria-current="page" href="/">Women</a>
+                            <a className="nav-link " aria-current="page" href="/#">Women</a>
                           </li>
                           <li className="nav-item">
-                            <a className="nav-link " aria-current="page" href="/">About</a>
+                            <a className="nav-link " aria-current="page" href="/#">About</a>
                           </li>
                           <li className="nav-item">
-                            <a className="nav-link" href="/">  Contact</a>
+                            <a className="nav-link" href="/#">  Contact</a>
                           </li>
                           
                         
@@ -59,14 +59,17 @@ const NavBar = ({actualizar}) => {
 
 {/* carrito y usuario */}
                   <div className='d-flex carrito  col-2'>
+                      <p className={ cantidad > 0 ? 'numero-cart' : 'carrito-vacio'}>{cantidad}</p>
                       <img src={carrito} alt="carrito" className='img  carrito-img' onClick={actualizar}/>
                       <img src={usuario} alt="usuario" className='img usuario ' />
 
                   </div>
               </div>
             </div>
-        </nav>
-
+           
+        </nav> 
+        
+        <div className="linea  "></div>
     </div>
   )
 }

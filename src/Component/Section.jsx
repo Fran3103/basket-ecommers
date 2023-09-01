@@ -35,7 +35,7 @@ const Section = ({contador, setContador, setPrecio, setCantidad}) => {
             </div>
             <button className='add-cart-btn'onClick={ 
                 () => {
-                         const totalPrecio = () => contador * 125 
+                         const totalPrecio = () => contador * 125.00 
                          setPrecio(totalPrecio)
                          setCantidad(contador)
                          }}>

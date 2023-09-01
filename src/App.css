@@ -1,5 +1,7 @@
 
-
+.app{
+    max-width: 1440px;
+}
 /* Editando Navbar */
 
 
@@ -9,6 +11,31 @@
     margin: 10px;
     position: relative;
 }
+
+.numero-cart{
+    display: flex;
+    position: absolute;
+    left: 65px;
+    top: -10px;
+    background-color: var(--Orange);
+    color: white;
+    border-radius: 40px;
+    padding:1px  3px;
+    font-size: 0.6rem;
+}
+
+.nav-link{
+    border-bottom: solid white;
+}
+
+.nav-link:hover{
+    transition: all 100ms ease-in-out;
+    border-bottom: solid var(--Orange);
+    
+    
+   
+}
+
 
 ul{
     gap: 30px;
@@ -103,6 +130,17 @@ ul{
 }
 
 /* 
+Linea */
+
+
+.linea{
+    margin: auto;
+    width:80%;
+    height: 2px;
+    background-color: var(--LightGrayishBlue);
+}
+
+/* 
 carrito lleno */
 .sin-producto{
     display: flex;
@@ -129,6 +167,7 @@ carrito lleno */
     gap: 15px;
     background-color: white;
     transition: all 5000ms ease-in-out;
+    z-index: 2000;
 }
 
 
@@ -156,6 +195,18 @@ hr{
     gap: 10px;
 }
 
+strong{
+    font-size: 0.9rem;
+}
+
+.eliminar{
+    cursor: pointer;
+    &:hover{
+    
+        box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.1 );
+    }
+}
+
 .titulo{
     width: 100%;
     font-size: 0.8rem;
@@ -178,6 +229,9 @@ hr{
     background-color: var(--Orange);
     font-family: var(--font);
     color: white;
+    &:hover{
+        background-color: rgb(255, 125, 26, 0.7);
+    }
 }
 /* fin del navbar */
 /* 
@@ -196,6 +250,7 @@ Edicion de Galeria */
   
     display: flex;
     width: 100%;
+    height: 100%;
     grid-row: 1/2;
     
     
@@ -203,16 +258,6 @@ Edicion de Galeria */
 
 .carousel-control-prev, .carousel-control-next{
     display: none;
-}
-
-@media screen and (max-width:990px) {
-    .carousel-indicators{
-        display: none;
-    }
-    .carousel-control-prev, .carousel-control-next{
-        display: block;
-    }
-    
 }
 
 
@@ -238,8 +283,15 @@ Edicion de Galeria */
 .slide{
     position: none;
 } 
+.carousel-item img{
+    width: 100%;
+    height: 100%;
+}
 
-
+.carousel-item{
+    width: 100%;
+    height: 100%;
+}
 
 /* .img1{
     width: 100%;
@@ -329,7 +381,7 @@ edicion de la seccion */
 
 .container-section{
     padding: 30px;
-    margin-top: 30px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -402,37 +454,6 @@ h2{
     width: 100%;
 }
 
-@media screen and (max-width:991px) {
-
-    .add-cart{
-        grid-template-columns: 1fr;
-        grid-row: 1fr 1fr;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .add-cart-btn{
-        width: 100%;
-    }
-
-    .cart{
-        margin-right: 0px;
-    }
-    .contador{
-        width: 100%;
-        justify-content: space-between;
-       
-    }
-
-    .contador p {
-        font-size: 2rem;
-    }
-
-    .add-cart-btn p{
-        font-size: 1.3rem;
-    }
-    
-}
 
 .contador{
     display: flex;
@@ -467,6 +488,9 @@ h2{
     background-color: var(--Orange);
     color: white;
     font-size: 1.2rem;
+    &:hover{
+        background-color: rgb(255, 125, 26, 0.7);
+    }
 }
 
 .add-cart-btn p{
@@ -502,6 +526,40 @@ seccion app */
 
 
 @media screen and (max-width:991px) {
+
+    .add-cart{
+        grid-template-columns: 1fr;
+        grid-row: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .add-cart-btn{
+        width: 100%;
+    }
+
+    .cart{
+        margin-right: 0px;
+    }
+    .contador{
+        width: 100%;
+        justify-content: space-between;
+       
+    }
+
+    .contador p {
+        font-size: 2rem;
+    }
+
+    .add-cart-btn p{
+        font-size: 1.3rem;
+    }
+    
+}
+
+
+
+@media screen and (max-width:991px) {
     .container-gral{
         flex-direction: column;
         justify-content: center;
@@ -509,4 +567,35 @@ seccion app */
         gap: 0;
     }
     
+}
+
+
+
+
+@media screen and (max-width:990px) {
+    .carousel-indicators{
+        display: none;
+    }
+
+    .carousel-control-prev, .carousel-control-next{
+        display: block;
+    }
+    
+}
+
+@media screen and (max-width:835px){
+    .carousel-item{
+        width: 100%;
+        height: 100%;
+    }
+   .carousel-inner{
+    grid-row: auto;
+    z-index: 0;
+   }
+   .carousel{
+    display: flex;
+    margin-top: 0;
+    z-index: 0;
+   }
+ 
 }

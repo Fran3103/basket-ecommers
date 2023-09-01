@@ -59,7 +59,7 @@ function App() {
 
     // carrito
 
-    const [Buy, setBuy] = useState(false)
+    const [Buy, setBuy] = useState(true)
 
     const actualizar = () => setBuy(!Buy)
 
@@ -76,6 +76,7 @@ function App() {
 
       <NavBar
       actualizar={actualizar}
+      cantidad={cantidad}
       
       />
       <Cart 
@@ -87,7 +88,7 @@ function App() {
         setContador={setContador}
      
       />
-      <div className='container-gral '>
+      <div className='container-gral container '>
           <Gallery 
             closeModal={closeModal} 
             imagen={setImagen}
